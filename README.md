@@ -42,7 +42,7 @@ The service does not need to be running at night or at the weekend so I created 
 # 8:01 am Mon-Fri start
 1 8 * * 1-5 systemctl start webexteams.service >/dev/null 2>&1
 # 19:01 Mon-Fri stop
-1 19 * * 1-5 systemctl start webexteams.service >/dev/null 2>&1
+1 19 * * 1-5 systemctl stop webexteams.service >/dev/null 2>&1
 ```
 
 ## Troubleshooting/Debugging
