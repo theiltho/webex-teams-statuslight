@@ -4,6 +4,8 @@ This is a small project for creating a diy busylight for cisco webex teams. Insp
 
 I used three LEDs, a Raspberry B Rev 2 and a random box.
 
+![webexstatuslight](./webexstatuslight.png)
+
 ## Installation
 
 ### Hardware
