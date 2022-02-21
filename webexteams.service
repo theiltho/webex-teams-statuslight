@@ -1,0 +1,17 @@
+[Unit]
+Description=Webex Teams Status Light
+
+[Service]
+Environment=WEBEX_TEAMS_ACCESS_TOKEN=<token>
+Environment=WEBEX_TEAMS_PERSONID=<id>
+ExecStart=/usr/bin/python3 /home/pi/webex-teams-statuslight/webexteams.py
+ExecStopPost=/usr/bin/bash /home/pi/webex-teams-statuslight/turnLEDsOff.sh
+Restart=always
+RestartSec=10s
+KillMode=process
+TimeoutSec=infinity
+#StandardOutput=append:/home/pi/webex-teams-statuslight/webexstatus_out.log
+StandardError=append:/home/pi/webex-teams-statuslight/webexstatus_err.log
+
+[Install]
+WantedBy=graphical.target
